@@ -19,9 +19,10 @@ const Navbar = () => {
           <ul className='mt-5 [&>li]:text-2xl [&>li]:border-b [&>li]:border-black [&>li]:dark:border-white'>
             <li><a href='/'>Homepage</a></li>
             <li><a href='/about'>About</a></li>
-            <li><a href='#'>Escape Room</a></li>
+            <li><a href='/escape-room'>Escape Room</a></li>
             <li><a href='#'>Coding Races</a></li>
             <li><a href='#'>Court Room</a></li>
+            <li><a href='/contact'>Contact</a></li>
           </ul>
         </div>
       </div>
@@ -29,9 +30,10 @@ const Navbar = () => {
         <ul className='flex justify-center [&>li]:p-2 [&>li]:border-r [&>li]:border-black [&>li]:dark:border-white'>
           <li><a href='/'>Homepage</a></li>
           <li><a href='/about'>About</a></li>
-          <li><a href='#'>Escape Room</a></li>
+          <li><a href='/escape-room'>Escape Room</a></li>
           <li><a href='#'>Coding Races</a></li>
           <li><a href='#'>Court Room</a></li>
+          <li><a href='/contact'>Contact</a></li>
         </ul>
         <button className='aspect-square mr-2 flex items-center hover:cursor-pointer' onClick={() => setMenuOpen(!menuOpen)}>
           <RxHamburgerMenu className='text-2xl'/>
