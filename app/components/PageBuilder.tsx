@@ -21,21 +21,17 @@ export default function PageBuilder() {
   const activeTab = tabs.find((t) => t.id === activeId) ?? null;
 
   const generateHTML = () => {
-    const tabButtons = tabs
-      .map(
+    const tabButtons = tabs.map(
         (t, i) =>
           `<button onclick="openTab('tab${i}')">${t.title}</button>`
-      )
-      .join("\n");
+      ).join("\n");
 
-    const tabContents = tabs
-      .map(
+    const tabContents = tabs.map(
         (t, i) =>
           `<div id="tab${i}" style="display:${i === 0 ? "block" : "none"};">\n<p>${t.content
             .replace(/\n/g, "<br>")
             .trim()}</p>\n</div>`
-      )
-      .join("\n");
+      ).join("\n");
 
     return `<!DOCTYPE html>
 <html>

@@ -22,7 +22,6 @@ const Navbar = () => {
             <li><a href='/escape-room'>Escape Room</a></li>
             <li><a href='#'>Coding Races</a></li>
             <li><a href='#'>Court Room</a></li>
-            <li><a href='/contact'>Contact</a></li>
           </ul>
         </div>
       </div>
@@ -33,7 +32,6 @@ const Navbar = () => {
           <li><a href='/escape-room'>Escape Room</a></li>
           <li><a href='#'>Coding Races</a></li>
           <li><a href='#'>Court Room</a></li>
-          <li><a href='/contact'>Contact</a></li>
         </ul>
         <button className='aspect-square mr-2 flex items-center hover:cursor-pointer' onClick={() => setMenuOpen(!menuOpen)}>
           <RxHamburgerMenu className='text-2xl'/>

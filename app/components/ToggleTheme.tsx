@@ -15,12 +15,12 @@ export default function ToggleTheme(){
 
     if (resolvedTheme == 'light') {
         return (
-            <button onClick={() => setTheme('dark')}>Light</button>
+            <button className='bg-gray-800 p-2 text-white font-bold' onClick={() => setTheme('dark')}>Turn Dark</button>
         )
     }
     if (resolvedTheme == 'dark') {
         return (
-            <button onClick={() => setTheme('light')}>Dark</button>
+            <button className='bg-gray-300 p-2 text-black font-bold' onClick={() => setTheme('light')}>Turn Light</button>
         )
     }
 }

@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <div>
       <Header title='Home'/>
-      <ToggleTheme />
       <PageBuilder />
+      <ToggleTheme />
       <Footer />
     </div>
   );

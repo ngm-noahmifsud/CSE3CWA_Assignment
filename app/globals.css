@@ -2,6 +2,12 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --color-ebonypurple: #0F0D15;
+  --color-charcoalblack: #1D1A26;
+  --color-pearl: #F5F9F8;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
