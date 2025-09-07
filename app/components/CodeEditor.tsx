@@ -1,8 +1,9 @@
 'use client'
+import type * as monaco from 'monaco-editor'
 
 import { Editor } from '@monaco-editor/react'
 import React, { useRef, useState } from 'react'
-import type * as monaco from 'monaco-editor'
+import CodeOutput from './CodeOutput'
 
 export default function () {
   const editorRef = useRef<monaco.editor.IStandaloneCodeEditor | null>(null)
@@ -14,7 +15,7 @@ export default function () {
   }
 
   return (
-    <div>
+    <div className='grid grid-cols-2 h-screen'>
       <Editor
         height="90vh"
         theme='vs-dark'
@@ -24,6 +25,7 @@ export default function () {
         value={value}
         onChange={(value?: string) => setValue(value ?? "")}
       />
+      <CodeOutput editorRef={editorRef} />
     </div>
   )
 }
