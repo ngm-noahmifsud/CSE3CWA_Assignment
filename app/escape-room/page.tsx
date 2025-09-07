@@ -10,7 +10,7 @@ const page = () => {
     <div>
       <Header title='Escape Room'/>
       <ToggleTheme />
-      <CodeEditor initialCode={`// Try this: console.log("2 + 2 =", 2 + 2);`} />
+      <CodeEditor />
     </div>
   )
 }
