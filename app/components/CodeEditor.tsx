@@ -5,6 +5,7 @@ import { Editor } from '@monaco-editor/react'
 import React, { useRef, useState } from 'react'
 import CodeOutput from './CodeOutput'
 
+
 export default function () {
   const editorRef = useRef<monaco.editor.IStandaloneCodeEditor | null>(null)
   const [value, setValue] = useState<string>('')
@@ -25,7 +26,7 @@ export default function () {
         value={value}
         onChange={(value?: string) => setValue(value ?? "")}
       />
-      <CodeOutput editorRef={editorRef} />
+      <CodeOutput editorRef={editorRef}/>
     </div>
   )
 }

@@ -1,14 +1,15 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { CodeOutputContext } from '../escape-room/context'
 
 import type * as monaco from 'monaco-editor'
 
 type CodeOutputProps = {
-  editorRef: React.RefObject<monaco.editor.IStandaloneCodeEditor | null>
+  editorRef: React.RefObject<monaco.editor.IStandaloneCodeEditor | null>;
 }
 
 const CodeOutput : React.FC<CodeOutputProps> = ({ editorRef }) => {
-  const [output, setOutput] = useState<string>('')
+  const outputState = useContext(CodeOutputContext);
   
   const runCode = async () => {
     const sourceCode = editorRef.current?.getValue() ?? ""
@@ -25,10 +26,10 @@ const CodeOutput : React.FC<CodeOutputProps> = ({ editorRef }) => {
 
       const data = await res.json();
       // piston puts stdout/stderr in `run.output`
-      setOutput(data.run.output);
+      outputState?.setOutput(data.run.output);
     } catch (error) {
       console.error(error);
-      setOutput("Error running code");
+      outputState?.setOutput("Error running code");
     }
   }
 
@@ -36,7 +37,7 @@ const CodeOutput : React.FC<CodeOutputProps> = ({ editorRef }) => {
     <div>
       <button onClick={runCode}>Run</button>
       <h1>Output</h1>
-      <pre>{output}</pre>
+      <pre>{outputState?.output}</pre>
     </div>
   )
 }
