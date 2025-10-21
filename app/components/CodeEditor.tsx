@@ -6,7 +6,7 @@ import React, { useRef, useState } from 'react'
 import CodeOutput from './CodeOutput'
 
 
-export default function () {
+export default function CodeEditor() {
   const editorRef = useRef<monaco.editor.IStandaloneCodeEditor | null>(null)
   const [value, setValue] = useState<string>('')
 

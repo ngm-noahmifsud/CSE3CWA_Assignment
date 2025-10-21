@@ -9,7 +9,7 @@ import { CodeOutputContext } from './context'
 import Timer from '../components/Timer'
 import PlayScreen from '../components/PlayScreen'
 
-const page = () => {
+const Page = () => {
   const [output, setOutput] = useState('')
   const [stagesComplete, setStagesComplete] = useState(0)
   const CODE_INSTRUCTIONS = [
@@ -52,4 +52,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
